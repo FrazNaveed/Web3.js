@@ -1,0 +1,20 @@
+var Web3 = require('web3')
+var url = 'https://mainnet.infura.io/v3/eccabf9fce4e49f09f4f519be3bea244'
+var web3 = new Web3(url)    // web3 now connectecd to the network
+
+
+var account = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
+web3.eth.getBalance(account, (err, bal)=> {balance = bal})
+//balance , calling this will give balance in wei
+
+web3.utils.fromWei(account, 'ether')  // will convert to ether
+
+web3.eth.accounts.create()   //create a new account on ethereum network
+
+
+//run ganache
+
+var Web3 = require('web3')
+var web3 =  new Web3('HTTP://127.0.0.1:7545')
+var account = '0xBC07f61360b1447FcE44F1efec845Ba8514323A9'
+web3.eth.getBalance(account, (err, wei)=>{balance = web3.utils.fromWei(wei, 'ether')})
